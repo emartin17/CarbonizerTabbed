@@ -22,6 +22,7 @@
 		8884DA6418C5889800979A92 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8884DA4318C5889800979A92 /* UIKit.framework */; };
 		8884DA6C18C5889800979A92 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8884DA6A18C5889800979A92 /* InfoPlist.strings */; };
 		8884DA6E18C5889800979A92 /* CarbonizerTabbedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8884DA6D18C5889800979A92 /* CarbonizerTabbedTests.m */; };
+		8884DA7918C5970700979A92 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8884DA7818C5970700979A92 /* ThirdViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		8884DA6918C5889800979A92 /* CarbonizerTabbedTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CarbonizerTabbedTests-Info.plist"; sourceTree = "<group>"; };
 		8884DA6B18C5889800979A92 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8884DA6D18C5889800979A92 /* CarbonizerTabbedTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarbonizerTabbedTests.m; sourceTree = "<group>"; };
+		8884DA7718C5970700979A92 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		8884DA7818C5970700979A92 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +125,8 @@
 				8884DA5518C5889800979A92 /* FirstViewController.m */,
 				8884DA5718C5889800979A92 /* SecondViewController.h */,
 				8884DA5818C5889800979A92 /* SecondViewController.m */,
+				8884DA7718C5970700979A92 /* ThirdViewController.h */,
+				8884DA7818C5970700979A92 /* ThirdViewController.m */,
 				8884DA5A18C5889800979A92 /* Images.xcassets */,
 				8884DA4618C5889800979A92 /* Supporting Files */,
 			);
@@ -255,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8884DA5918C5889800979A92 /* SecondViewController.m in Sources */,
+				8884DA7918C5970700979A92 /* ThirdViewController.m in Sources */,
 				8884DA5018C5889800979A92 /* AppDelegate.m in Sources */,
 				8884DA5618C5889800979A92 /* FirstViewController.m in Sources */,
 				8884DA4C18C5889800979A92 /* main.m in Sources */,
