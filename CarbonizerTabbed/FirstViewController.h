@@ -67,7 +67,7 @@
 -(IBAction)SixS:(id)sender;
 -(IBAction)SevenS:(id)sender;
 
--(void)guessCheck;
+-(bool)guessCheck;
 -(NSString*)sigChooser;
 
 
