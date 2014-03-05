@@ -7,6 +7,7 @@
 //
 
 #import "FirstViewController.h"
+#import "Methods.h"
 
 @interface FirstViewController ()
 
@@ -16,6 +17,32 @@
 
 - (void)viewDidLoad
 {
+    if (![[NSUserDefaults standardUserDefaults] objectForKey:@"MajorSharpsOn"] && ![[NSUserDefaults standardUserDefaults] objectForKey:@"MajorFlatsOn"] && ![[NSUserDefaults standardUserDefaults] objectForKey:@"MinorSharpsOn"] && ![[NSUserDefaults standardUserDefaults] objectForKey:@"MinorFlatsOn"] && ![[NSUserDefaults standardUserDefaults] objectForKey:@"TimerEnabled"])
+    {
+        [[NSUserDefaults standardUserDefaults]
+         setBool:true forKey:@"MajorSharpsOn"];
+        [[NSUserDefaults standardUserDefaults]
+         setBool:true forKey:@"MajorFlatsOn"];
+        [[NSUserDefaults standardUserDefaults]
+         setBool:true forKey:@"MinorSharpsOn"];
+        [[NSUserDefaults standardUserDefaults]
+         setBool:true forKey:@"MinorFlatsOn"];
+        [[NSUserDefaults standardUserDefaults]
+         setBool:true forKey:@"TimerEnabled"];
+    }
+    NSLog(@"%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"authorized"]);
+    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"authorized"] isEqualToString:@"no"] || ![[NSUserDefaults standardUserDefaults] objectForKey:@"authorized"])
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Beta Key Submission"
+                                                        message:@"Press submit to register your beta" delegate:self cancelButtonTitle: @"Submit"
+                                              otherButtonTitles: nil];
+        alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+        [alert textFieldAtIndex:0].delegate = self;
+        betaKey = [alert textFieldAtIndex:0];
+        //note above delegate property
+        [alert show];
+    }
+
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     majorSharpKeySigs = [NSArray arrayWithObjects: @"C Major", @"G Major", @"D Major", @"A Major", @"E Major", @"B Major", @"F# Major", @"C# Major", nil];
@@ -33,6 +60,30 @@
     minFl = [[NSDictionary alloc] initWithObjects:minorFlatKeySigs forKeys:minorFlatKeyAnswers];
     sigs = [[NSMutableArray alloc] init];
     keyset = [[NSDictionary alloc] init];
+}
+
+-(void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if(buttonIndex == 0)
+    {
+        if([[Methods executeScript:[NSString stringWithFormat:@"http://108.41.251.198/API/checkBetaKey.php?key=%@",betaKey.text]] isEqualToString:@"111"])
+        {
+            [[NSUserDefaults standardUserDefaults] setObject:@"yes" forKey:@"authorized"];
+        }
+        else
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Beta Key Submission"
+                                                            message:@"Press submit to register your beta" delegate:self cancelButtonTitle: @"Submit"
+                                                  otherButtonTitles: nil];
+            alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+            [alert textFieldAtIndex:0].delegate = self;
+            betaKey = [alert textFieldAtIndex:0];
+            //note above delegate property
+            [alert show];
+        }
+        
+
+    }
 }
 
 -(NSString*)sigChooser
@@ -243,6 +294,9 @@
             answerLabel.text = [NSString stringWithFormat:@"Incorrect. The correct answer was %@.",[correctAnswer stringByReplacingOccurrencesOfString:@"f" withString:@"♭"]];
         }
     }
+    
+    scoreNum = [score.text substringFromIndex:6].intValue;
+    livesNum = [lives.text substringFromIndex:6].intValue;
     
     if(livesNum == 0)
     {

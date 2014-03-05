@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		886D9FD518C7A336006E7E55 /* Methods.m in Sources */ = {isa = PBXBuildFile; fileRef = 886D9FD418C7A336006E7E55 /* Methods.m */; };
 		8884DA4018C5889800979A92 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8884DA3F18C5889800979A92 /* Foundation.framework */; };
 		8884DA4218C5889800979A92 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8884DA4118C5889800979A92 /* CoreGraphics.framework */; };
 		8884DA4418C5889800979A92 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8884DA4318C5889800979A92 /* UIKit.framework */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		886D9FD318C7A336006E7E55 /* Methods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Methods.h; sourceTree = "<group>"; };
+		886D9FD418C7A336006E7E55 /* Methods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Methods.m; sourceTree = "<group>"; };
 		8884DA3C18C5889800979A92 /* CarbonizerTabbed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarbonizerTabbed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8884DA3F18C5889800979A92 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8884DA4118C5889800979A92 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -136,6 +139,8 @@
 		8884DA4618C5889800979A92 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				886D9FD318C7A336006E7E55 /* Methods.h */,
+				886D9FD418C7A336006E7E55 /* Methods.m */,
 				8884DA4718C5889800979A92 /* CarbonizerTabbed-Info.plist */,
 				8884DA4818C5889800979A92 /* InfoPlist.strings */,
 				8884DA4B18C5889800979A92 /* main.m */,
@@ -209,6 +214,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Martin Developments";
 				TargetAttributes = {
+					8884DA3B18C5889800979A92 = {
+						DevelopmentTeam = RFF9P379Y9;
+					};
 					8884DA5F18C5889800979A92 = {
 						TestTargetID = 8884DA3B18C5889800979A92;
 					};
@@ -263,6 +271,7 @@
 				8884DA7918C5970700979A92 /* ThirdViewController.m in Sources */,
 				8884DA5018C5889800979A92 /* AppDelegate.m in Sources */,
 				8884DA5618C5889800979A92 /* FirstViewController.m in Sources */,
+				886D9FD518C7A336006E7E55 /* Methods.m in Sources */,
 				8884DA4C18C5889800979A92 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,10 +399,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CarbonizerTabbed/CarbonizerTabbed-Prefix.pch";
 				INFOPLIST_FILE = "CarbonizerTabbed/CarbonizerTabbed-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -403,10 +415,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CarbonizerTabbed/CarbonizerTabbed-Prefix.pch";
 				INFOPLIST_FILE = "CarbonizerTabbed/CarbonizerTabbed-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -472,6 +487,7 @@
 				8884DA7318C5889800979A92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8884DA7418C5889800979A92 /* Build configuration list for PBXNativeTarget "CarbonizerTabbedTests" */ = {
 			isa = XCConfigurationList;
@@ -480,6 +496,7 @@
 				8884DA7618C5889800979A92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
