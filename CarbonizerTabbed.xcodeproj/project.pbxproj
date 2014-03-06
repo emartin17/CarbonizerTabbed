@@ -24,6 +24,11 @@
 		8884DA6C18C5889800979A92 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8884DA6A18C5889800979A92 /* InfoPlist.strings */; };
 		8884DA6E18C5889800979A92 /* CarbonizerTabbedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8884DA6D18C5889800979A92 /* CarbonizerTabbedTests.m */; };
 		8884DA7918C5970700979A92 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8884DA7818C5970700979A92 /* ThirdViewController.m */; };
+		88F7152A18C814A500656224 /* CarbonizerIconAppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 88F7152518C814A500656224 /* CarbonizerIconAppIcon.png */; };
+		88F7152B18C814A500656224 /* CarbonizerIconAppIconSettings.png in Resources */ = {isa = PBXBuildFile; fileRef = 88F7152618C814A500656224 /* CarbonizerIconAppIconSettings.png */; };
+		88F7152C18C814A500656224 /* CarbonizerIconAppIconSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 88F7152718C814A500656224 /* CarbonizerIconAppIconSmall.png */; };
+		88F7152D18C814A500656224 /* CarbonizerIconAppIconSpotlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 88F7152818C814A500656224 /* CarbonizerIconAppIconSpotlight.png */; };
+		88F7152E18C814A500656224 /* CarbonizerIconAppStore.png in Resources */ = {isa = PBXBuildFile; fileRef = 88F7152918C814A500656224 /* CarbonizerIconAppStore.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +67,11 @@
 		8884DA6D18C5889800979A92 /* CarbonizerTabbedTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarbonizerTabbedTests.m; sourceTree = "<group>"; };
 		8884DA7718C5970700979A92 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		8884DA7818C5970700979A92 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		88F7152518C814A500656224 /* CarbonizerIconAppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CarbonizerIconAppIcon.png; sourceTree = "<group>"; };
+		88F7152618C814A500656224 /* CarbonizerIconAppIconSettings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CarbonizerIconAppIconSettings.png; sourceTree = "<group>"; };
+		88F7152718C814A500656224 /* CarbonizerIconAppIconSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CarbonizerIconAppIconSmall.png; sourceTree = "<group>"; };
+		88F7152818C814A500656224 /* CarbonizerIconAppIconSpotlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CarbonizerIconAppIconSpotlight.png; sourceTree = "<group>"; };
+		88F7152918C814A500656224 /* CarbonizerIconAppStore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CarbonizerIconAppStore.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +149,11 @@
 		8884DA4618C5889800979A92 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				88F7152518C814A500656224 /* CarbonizerIconAppIcon.png */,
+				88F7152618C814A500656224 /* CarbonizerIconAppIconSettings.png */,
+				88F7152718C814A500656224 /* CarbonizerIconAppIconSmall.png */,
+				88F7152818C814A500656224 /* CarbonizerIconAppIconSpotlight.png */,
+				88F7152918C814A500656224 /* CarbonizerIconAppStore.png */,
 				886D9FD318C7A336006E7E55 /* Methods.h */,
 				886D9FD418C7A336006E7E55 /* Methods.m */,
 				8884DA4718C5889800979A92 /* CarbonizerTabbed-Info.plist */,
@@ -247,7 +262,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8884DA5B18C5889800979A92 /* Images.xcassets in Resources */,
+				88F7152B18C814A500656224 /* CarbonizerIconAppIconSettings.png in Resources */,
+				88F7152C18C814A500656224 /* CarbonizerIconAppIconSmall.png in Resources */,
+				88F7152E18C814A500656224 /* CarbonizerIconAppStore.png in Resources */,
+				88F7152D18C814A500656224 /* CarbonizerIconAppIconSpotlight.png in Resources */,
 				8884DA4A18C5889800979A92 /* InfoPlist.strings in Resources */,
+				88F7152A18C814A500656224 /* CarbonizerIconAppIcon.png in Resources */,
 				8884DA5318C5889800979A92 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
