@@ -24,6 +24,11 @@
 		8884DA6C18C5889800979A92 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8884DA6A18C5889800979A92 /* InfoPlist.strings */; };
 		8884DA6E18C5889800979A92 /* CarbonizerTabbedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8884DA6D18C5889800979A92 /* CarbonizerTabbedTests.m */; };
 		8884DA7918C5970700979A92 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8884DA7818C5970700979A92 /* ThirdViewController.m */; };
+		88B94D5718DB994D0088ABB8 /* MajorFlats.png in Resources */ = {isa = PBXBuildFile; fileRef = 88B94D5318DB994D0088ABB8 /* MajorFlats.png */; };
+		88B94D5818DB994D0088ABB8 /* MajorSharps.png in Resources */ = {isa = PBXBuildFile; fileRef = 88B94D5418DB994D0088ABB8 /* MajorSharps.png */; };
+		88B94D5918DB994D0088ABB8 /* MinorFlats.png in Resources */ = {isa = PBXBuildFile; fileRef = 88B94D5518DB994D0088ABB8 /* MinorFlats.png */; };
+		88B94D5A18DB994D0088ABB8 /* MinorSharps.png in Resources */ = {isa = PBXBuildFile; fileRef = 88B94D5618DB994D0088ABB8 /* MinorSharps.png */; };
+		88B94D5D18DB9BB50088ABB8 /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B94D5C18DB9BB50088ABB8 /* PageContentViewController.m */; };
 		88F7152A18C814A500656224 /* CarbonizerIconAppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 88F7152518C814A500656224 /* CarbonizerIconAppIcon.png */; };
 		88F7152B18C814A500656224 /* CarbonizerIconAppIconSettings.png in Resources */ = {isa = PBXBuildFile; fileRef = 88F7152618C814A500656224 /* CarbonizerIconAppIconSettings.png */; };
 		88F7152C18C814A500656224 /* CarbonizerIconAppIconSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 88F7152718C814A500656224 /* CarbonizerIconAppIconSmall.png */; };
@@ -67,6 +72,12 @@
 		8884DA6D18C5889800979A92 /* CarbonizerTabbedTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarbonizerTabbedTests.m; sourceTree = "<group>"; };
 		8884DA7718C5970700979A92 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		8884DA7818C5970700979A92 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		88B94D5318DB994D0088ABB8 /* MajorFlats.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MajorFlats.png; path = ../MajorFlats.png; sourceTree = "<group>"; };
+		88B94D5418DB994D0088ABB8 /* MajorSharps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MajorSharps.png; path = ../MajorSharps.png; sourceTree = "<group>"; };
+		88B94D5518DB994D0088ABB8 /* MinorFlats.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MinorFlats.png; path = ../MinorFlats.png; sourceTree = "<group>"; };
+		88B94D5618DB994D0088ABB8 /* MinorSharps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MinorSharps.png; path = ../MinorSharps.png; sourceTree = "<group>"; };
+		88B94D5B18DB9BB50088ABB8 /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentViewController.h; sourceTree = "<group>"; };
+		88B94D5C18DB9BB50088ABB8 /* PageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageContentViewController.m; sourceTree = "<group>"; };
 		88F7152518C814A500656224 /* CarbonizerIconAppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CarbonizerIconAppIcon.png; sourceTree = "<group>"; };
 		88F7152618C814A500656224 /* CarbonizerIconAppIconSettings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CarbonizerIconAppIconSettings.png; sourceTree = "<group>"; };
 		88F7152718C814A500656224 /* CarbonizerIconAppIconSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CarbonizerIconAppIconSmall.png; sourceTree = "<group>"; };
@@ -138,6 +149,8 @@
 				8884DA5518C5889800979A92 /* FirstViewController.m */,
 				8884DA5718C5889800979A92 /* SecondViewController.h */,
 				8884DA5818C5889800979A92 /* SecondViewController.m */,
+				88B94D5B18DB9BB50088ABB8 /* PageContentViewController.h */,
+				88B94D5C18DB9BB50088ABB8 /* PageContentViewController.m */,
 				8884DA7718C5970700979A92 /* ThirdViewController.h */,
 				8884DA7818C5970700979A92 /* ThirdViewController.m */,
 				8884DA5A18C5889800979A92 /* Images.xcassets */,
@@ -149,6 +162,10 @@
 		8884DA4618C5889800979A92 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				88B94D5318DB994D0088ABB8 /* MajorFlats.png */,
+				88B94D5418DB994D0088ABB8 /* MajorSharps.png */,
+				88B94D5518DB994D0088ABB8 /* MinorFlats.png */,
+				88B94D5618DB994D0088ABB8 /* MinorSharps.png */,
 				88F7152518C814A500656224 /* CarbonizerIconAppIcon.png */,
 				88F7152618C814A500656224 /* CarbonizerIconAppIconSettings.png */,
 				88F7152718C814A500656224 /* CarbonizerIconAppIconSmall.png */,
@@ -226,7 +243,7 @@
 		8884DA3418C5889800979A92 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Martin Developments";
 				TargetAttributes = {
 					8884DA3B18C5889800979A92 = {
@@ -261,9 +278,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88B94D5A18DB994D0088ABB8 /* MinorSharps.png in Resources */,
 				8884DA5B18C5889800979A92 /* Images.xcassets in Resources */,
 				88F7152B18C814A500656224 /* CarbonizerIconAppIconSettings.png in Resources */,
 				88F7152C18C814A500656224 /* CarbonizerIconAppIconSmall.png in Resources */,
+				88B94D5718DB994D0088ABB8 /* MajorFlats.png in Resources */,
+				88B94D5818DB994D0088ABB8 /* MajorSharps.png in Resources */,
+				88B94D5918DB994D0088ABB8 /* MinorFlats.png in Resources */,
 				88F7152E18C814A500656224 /* CarbonizerIconAppStore.png in Resources */,
 				88F7152D18C814A500656224 /* CarbonizerIconAppIconSpotlight.png in Resources */,
 				8884DA4A18C5889800979A92 /* InfoPlist.strings in Resources */,
@@ -289,6 +310,7 @@
 			files = (
 				8884DA5918C5889800979A92 /* SecondViewController.m in Sources */,
 				8884DA7918C5970700979A92 /* ThirdViewController.m in Sources */,
+				88B94D5D18DB9BB50088ABB8 /* PageContentViewController.m in Sources */,
 				8884DA5018C5889800979A92 /* AppDelegate.m in Sources */,
 				8884DA5618C5889800979A92 /* FirstViewController.m in Sources */,
 				886D9FD518C7A336006E7E55 /* Methods.m in Sources */,
@@ -346,7 +368,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -385,7 +406,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -419,13 +439,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Eric Martin (4FS79FZ9G2)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CarbonizerTabbed/CarbonizerTabbed-Prefix.pch";
 				INFOPLIST_FILE = "CarbonizerTabbed/CarbonizerTabbed-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "BD88093F-C676-48E5-92E3-21465BC9A066";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -435,13 +455,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Eric Martin (4FS79FZ9G2)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CarbonizerTabbed/CarbonizerTabbed-Prefix.pch";
 				INFOPLIST_FILE = "CarbonizerTabbed/CarbonizerTabbed-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "BD88093F-C676-48E5-92E3-21465BC9A066";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -449,7 +469,6 @@
 		8884DA7518C5889800979A92 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CarbonizerTabbed.app/CarbonizerTabbed";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -472,7 +491,6 @@
 		8884DA7618C5889800979A92 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CarbonizerTabbed.app/CarbonizerTabbed";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
