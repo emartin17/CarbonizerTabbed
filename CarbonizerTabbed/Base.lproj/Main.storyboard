@@ -216,7 +216,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Quiz" image="first" id="9FP-l5-hgb"/>
+                    <tabBarItem key="tabBarItem" title="Quiz" image="70338_258_f-1_o copy.png" id="9FP-l5-hgb"/>
                     <connections>
                         <outlet property="answerLabel" destination="dHg-UQ-Fj9" id="0nY-e5-QPL"/>
                         <outlet property="keySigShower" destination="6Ck-On-UY9" id="aaY-Vq-PiR"/>
@@ -309,13 +309,13 @@
                                     <action selector="saveSettings:" destination="BSm-aU-U6b" eventType="valueChanged" id="s5b-Xa-WhC"/>
                                 </connections>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G4T-se-J8m">
+                            <switch hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G4T-se-J8m">
                                 <rect key="frame" x="251" y="384" width="51" height="31"/>
                                 <connections>
                                     <action selector="saveSettings:" destination="BSm-aU-U6b" eventType="valueChanged" id="Q2Z-bc-NhL"/>
                                 </connections>
                             </switch>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Timer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EwT-Vz-nk0">
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Timer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EwT-Vz-nk0">
                                 <rect key="frame" x="20" y="389" width="71" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -331,7 +331,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Preferences" id="PR8-ET-dvs"/>
+                    <tabBarItem key="tabBarItem" title="Preferences" image="PreferencesIconCarbonizer.png" id="PR8-ET-dvs"/>
                     <connections>
                         <outlet property="majorFlatsOn" destination="bnZ-T1-3XJ" id="2Kc-d3-y1X"/>
                         <outlet property="majorSharpsOn" destination="y3R-pD-cYx" id="J2M-Dx-e0O"/>
@@ -350,37 +350,23 @@
                 <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="8Rn-xd-qDL" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qYt-gS-5j0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1277" y="203"/>
+            <point key="canvasLocation" x="1627" y="171"/>
         </scene>
-        <!--Page View Controller-->
-        <scene sceneID="uLA-C9-gY3">
+        <!--Navigation Controller - Study-->
+        <scene sceneID="70L-Xk-92e">
             <objects>
-                <viewController storyboardIdentifier="PageViewController2" id="vqr-ZU-jid" customClass="UIPageViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="XRI-vZ-cPK"/>
-                        <viewControllerLayoutGuide type="bottom" id="Cso-fU-VQz"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="qMu-IZ-RuD">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="wOG-cb-e9e">
-                                <rect key="frame" x="141" y="436" width="39" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="currentPageIndicatorTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </pageControl>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
+                <navigationController definesPresentationContext="YES" id="Mm3-fw-4Nd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Study" image="StudyIconCarbonizer.png" id="THp-Nh-yRN"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wYN-2V-OME">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
                     <connections>
-                        <outlet property="dataSource" destination="qMu-IZ-RuD" id="vuq-br-VHZ"/>
-                        <outlet property="delegate" destination="qMu-IZ-RuD" id="VR8-zi-5u8"/>
+                        <segue destination="QUy-BD-bpt" kind="relationship" relationship="rootViewController" id="wl7-90-HTp"/>
                     </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3WJ-P5-kOK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gye-4x-0xf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1268" y="234"/>
+            <point key="canvasLocation" x="653" y="563"/>
         </scene>
         <!--Second View Controller - Second-->
         <scene sceneID="ot8-2e-RuS">
@@ -393,31 +379,13 @@
                     <view key="view" contentMode="scaleToFill" id="gMD-aP-Fq6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8S7-hX-cRj">
-                                <rect key="frame" x="0.0" y="27" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Theory Card" id="gmz-UW-j9T"/>
-                                </items>
-                            </navigationBar>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="Olb-iM-Acm">
-                                <rect key="frame" x="88" y="471" width="145" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="currentPageIndicatorTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </pageControl>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Card" image="second" id="Z7h-1E-pvt"/>
-                    <connections>
-                        <outlet property="pageControl" destination="Olb-iM-Acm" id="pO3-ZK-Jdl"/>
-                    </connections>
+                    <navigationItem key="navigationItem" title="Study" id="A8F-HN-a2u"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3qq-4t-Ow8" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653" y="539"/>
+            <point key="canvasLocation" x="1175" y="563"/>
         </scene>
         <!--Page Content View Controller-->
         <scene sceneID="ZQH-nY-abp">
@@ -432,27 +400,27 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BSb-5t-l1r">
-                                <rect key="frame" x="0.0" y="73" width="320" height="432"/>
+                                <rect key="frame" x="0.0" y="158" width="320" height="302"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ANK-oz-zHh">
-                                <rect key="frame" x="0.0" y="29" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem id="0E7-uu-CYT"/>
-                                </items>
-                            </navigationBar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSJ-64-A6f">
+                                <rect key="frame" x="79" y="93" width="162" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="31"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="backgroundImageView" destination="BSb-5t-l1r" id="Heq-Z2-82d"/>
-                        <outlet property="navBar" destination="ANK-oz-zHh" id="ZtN-3d-FP9"/>
+                        <outlet property="titleLabel" destination="cSJ-64-A6f" id="lao-8Y-e8G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JU9-Io-qL6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1277" y="874"/>
+            <point key="canvasLocation" x="1627" y="992"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Vex-rW-GRa">
@@ -466,7 +434,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="CZ4-MO-1fc" kind="relationship" relationship="viewControllers" id="SUk-Ux-ee1"/>
-                        <segue destination="QUy-BD-bpt" kind="relationship" relationship="viewControllers" id="M8t-EP-wfW"/>
+                        <segue destination="Mm3-fw-4Nd" kind="relationship" relationship="viewControllers" id="KWg-bX-fWG"/>
                         <segue destination="BSm-aU-U6b" kind="relationship" relationship="viewControllers" id="y9N-JO-ykW"/>
                     </connections>
                 </tabBarController>
@@ -476,8 +444,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="70338_258_f-1_o copy.png" width="23" height="25"/>
+        <image name="PreferencesIconCarbonizer.png" width="25" height="25"/>
+        <image name="StudyIconCarbonizer.png" width="18" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

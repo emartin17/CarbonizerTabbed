@@ -12,7 +12,9 @@
 
 @end
 
+
 @implementation ThirdViewController
+@synthesize lastToggle;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -23,8 +25,30 @@
     return self;
 }
 
+-(BOOL)nullSetCheck
+{
+    if (majorSharpsOn.isOn || majorFlatsOn.isOn || minorSharpsOn.isOn || minorFlatsOn.isOn)
+    {
+        return TRUE;
+    }
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"No Keys Enabled" message: @"One set of keys must be turned on." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+        return FALSE;
+    }
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    [self.lastToggle setOn:TRUE animated:TRUE];
+}
+
 -(IBAction)saveSettings:(id)sender
 {
+    self.lastToggle = sender;
+    if ([self nullSetCheck])
+    {
         [[NSUserDefaults standardUserDefaults]
          setBool:majorSharpsOn.isOn forKey:@"MajorSharpsOn"];
         [[NSUserDefaults standardUserDefaults]
@@ -35,25 +59,26 @@
          setBool:minorFlatsOn.isOn forKey:@"MinorFlatsOn"];
         [[NSUserDefaults standardUserDefaults]
          setBool:timerOn.isOn forKey:@"TimerEnabled"];
+    }
 }
-    
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    // Do any additional setup after loading the view.
     
     [NSUserDefaults standardUserDefaults];
     
     majorSharpsOn.on = [[NSUserDefaults standardUserDefaults]
-                 boolForKey:@"MajorSharpsOn"];
+                        boolForKey:@"MajorSharpsOn"];
     majorFlatsOn.on = [[NSUserDefaults standardUserDefaults]
-                boolForKey:@"MajorFlatsOn"];
+                       boolForKey:@"MajorFlatsOn"];
     minorSharpsOn.on = [[NSUserDefaults standardUserDefaults]
-                 boolForKey:@"MinorSharpsOn"];
+                        boolForKey:@"MinorSharpsOn"];
     minorFlatsOn.on = [[NSUserDefaults standardUserDefaults]
-                boolForKey:@"MinorFlatsOn"];
+                       boolForKey:@"MinorFlatsOn"];
     timerOn.on = [[NSUserDefaults standardUserDefaults]
-              boolForKey:@"TimerEnabled"];
+                  boolForKey:@"TimerEnabled"];
 }
 
 

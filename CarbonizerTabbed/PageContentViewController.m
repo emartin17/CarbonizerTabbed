@@ -28,7 +28,7 @@
     [super viewDidLoad];
     
     self.backgroundImageView.image = [UIImage imageNamed:self.imageFile];
-    self.navBar.topItem.title = self.titleText;
+    self.titleLabel.text = self.titleText;
     
 }
 

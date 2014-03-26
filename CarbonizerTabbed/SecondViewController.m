@@ -23,49 +23,44 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
+    
 	// Create the data model
-    pageTitles = @[@"Major Sharps", @"Major Flats", @"Minor Sharps", @"Minor Flats"];
+    pageTitles = @[@"Major ♯'s", @"Major ♭'s", @"Minor ♯'s", @"Minor ♭'s"];
     pageImages = @[@"MajorSharps.png", @"MajorFlats.png", @"MinorSharps.png", @"MinorFlats.png"];
     
-    self.pageControl.numberOfPages = [self.pageTitles count];
-    self.pageControl.tintColor = [UIColor lightGrayColor];
-    self.pageControl.currentPageIndicatorTintColor = [UIColor blueColor];
-    self.pageControl.backgroundColor = [UIColor blackColor];
-    
-    self.pageViewController = [[UIPageViewController alloc]initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
-    
-    self.pageViewController.delegate = self;
-    
-    
-    
-    
     // Create page view controller
-    //    self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController2"];
+    self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];
+    self.pageViewController.dataSource = self;
     
     PageContentViewController *startingViewController = [self viewControllerAtIndex:0];
     NSArray *viewControllers = @[startingViewController];
     [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
-    self.pageViewController.dataSource = self;
+    
+    // Change the size of page view controller
+    self.pageViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 45);
+    
     [self addChildViewController:pageViewController];
     [self.view addSubview:pageViewController.view];
-    // Change the size of page view controller
-    self.pageViewController.view.frame = CGRectMake(0.0, 0.0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height + 10.0);
-    
     [self.pageViewController didMoveToParentViewController:self];
-    self.view.gestureRecognizers = self.pageViewController.gestureRecognizers;
     
+    // Edit UIPageControl
+    for (UIView *subview in self.pageViewController.view.subviews) {
+        if ([subview isKindOfClass:[UIPageControl class]]) {
+            UIPageControl *pageControl = (UIPageControl *)subview;
+            pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
+            pageControl.currentPageIndicatorTintColor = [UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1.0];
+        }
+    }
+    
+    //self.navigationc
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (IBAction)startWalkthrough:(id)sender {
-    PageContentViewController *startingViewController = [self viewControllerAtIndex:0];
-    NSArray *viewControllers = @[startingViewController];
-    [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionReverse animated:NO completion:nil];
 }
 
 - (PageContentViewController *)viewControllerAtIndex:(NSUInteger)index
@@ -78,6 +73,7 @@
     PageContentViewController *pageContentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageContentViewController"];
     pageContentViewController.imageFile = self.pageImages[index];
     pageContentViewController.titleText = self.pageTitles[index];
+    
     pageContentViewController.pageIndex = index;
     
     return pageContentViewController;
@@ -112,20 +108,10 @@
     return [self viewControllerAtIndex:index];
 }
 
-- (void)pageViewController:(UIPageViewController *)viewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed
+- (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController
 {
-    if (!completed){return;}
-    
-    // Find index of current page
-    PageContentViewController *currentViewController = (PageContentViewController *)[self.pageViewController.viewControllers lastObject];
-//    NSUInteger indexOfCurrentPage = [indexOfC currentViewController];
-    NSUInteger indexOfCurrentPage = [self indexOfAccessibilityElement:currentViewController];
-    self.pageControl.currentPage = indexOfCurrentPage;
+    return [self.pageTitles count];
 }
-//- (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController
-//{
-//    return [self.pageTitles count];
-//}
 
 - (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController
 {

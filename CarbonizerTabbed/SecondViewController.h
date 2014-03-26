@@ -11,10 +11,8 @@
 
 @interface SecondViewController : UIViewController <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 
-
-- (IBAction)startWalkthrough:(id)sender;
+@property (weak, nonatomic) IBOutlet UINavigationBar *navBar;
 @property (strong, nonatomic) UIPageViewController *pageViewController;
-@property (strong, nonatomic) IBOutlet UIPageControl *pageControl;
 @property (strong, nonatomic) NSArray *pageTitles;
 @property (strong, nonatomic) NSArray *pageImages;
 
