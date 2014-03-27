@@ -266,7 +266,6 @@
 -(bool)guessCheck
 {
     NSArray *correctAnswerArray = [keyset allKeysForObject:keySigShower.text];
-    NSLog(@"%@",correctAnswerArray);
     NSString *correctAnswer = [correctAnswerArray objectAtIndex:0];
     int scoreNum = [score.text substringFromIndex:6].intValue;
     int livesNum = [lives.text substringFromIndex:6].intValue;
@@ -278,16 +277,17 @@
         livesNum = [lives.text substringFromIndex:6].intValue;
         score.text = [NSString stringWithFormat:@"Score: %i",scoreNum+1];
         answerLabel.text = @"Correct!";
-        return 1;
+        return TRUE;
     }
-    
     else
     {
         scoreNum = [score.text substringFromIndex:6].intValue;
         livesNum = [lives.text substringFromIndex:6].intValue;
         lives.text = [NSString stringWithFormat:@"Lives: %i",livesNum-1];
+        livesNum = [lives.text substringFromIndex:6].intValue;
         correctAnswer = [correctAnswer stringByReplacingOccurrencesOfString:@"f" withString:@"♭"];
         correctAnswer = [correctAnswer stringByReplacingOccurrencesOfString:@"0" withString:@"0♯/♭"];
+        correctAnswer = [correctAnswer stringByReplacingOccurrencesOfString:@"#" withString:@"♯"];
         answerLabel.text = [NSString stringWithFormat:@"Incorrect. The correct answer was %@",correctAnswer];
         if(livesNum == 0)
         {
@@ -306,7 +306,7 @@
             keySigShower.text = [NSString stringWithFormat:@"Game over. You ended with a score of %i.",scoreNum];
             score.text = @"Score: 0";
             answerLabel.text = @"";
-            return false;
+            return FALSE;
         }
         
         else
