@@ -7,7 +7,6 @@
 //
 
 #import "FirstViewController.h"
-#import "Methods.h"
 
 @interface FirstViewController ()
 
