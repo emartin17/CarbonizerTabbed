@@ -16,15 +16,27 @@
 
 - (void)viewDidLoad
 {
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"MajorSharpsOn"] && ![[NSUserDefaults standardUserDefaults] boolForKey:@"MajorFlatsOn"] && ![[NSUserDefaults standardUserDefaults] boolForKey:@"MinorSharpsOn"] && ![[NSUserDefaults standardUserDefaults] boolForKey:@"MinorFlatsOn"])
+    {
+        [[NSUserDefaults standardUserDefaults]
+         setBool:TRUE forKey:@"MajorSharpsOn"];
+        [[NSUserDefaults standardUserDefaults]
+         setBool:TRUE forKey:@"MajorFlatsOn"];
+        [[NSUserDefaults standardUserDefaults]
+         setBool:TRUE forKey:@"MinorSharpsOn"];
+        [[NSUserDefaults standardUserDefaults]
+         setBool:TRUE forKey:@"MinorFlatsOn"];
+    }
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    majorSharpKeySigs = [NSArray arrayWithObjects: @"C Major", @"G Major", @"D Major", @"A Major", @"E Major", @"B Major", @"F# Major", @"C# Major", nil];
-    majorSharpKeyAnswers = [NSArray arrayWithObjects: @"0", @"1#", @"2#", @"3#", @"4#", @"5#", @"6#", @"7#", nil];
+    majorSharpKeySigs = [NSArray arrayWithObjects: @"C Major", @"G Major", @"D Major", @"A Major", @"E Major", @"B Major", @"F♯ Major", @"C♯ Major", nil];
+    majorSharpKeyAnswers = [NSArray arrayWithObjects: @"0", @"1♯", @"2♯", @"3♯", @"4♯", @"5♯", @"6♯", @"7♯", nil];
     majorFlatKeySigs = [NSArray arrayWithObjects: @"C Major", @"F Major", @"B♭ Major", @"E♭ Major", @"A♭ Major", @"D♭ Major", @"G♭ Major", @"C♭ Major", nil];
     majorFlatKeyAnswers = [NSArray arrayWithObjects:  @"0", @"1f", @"2f", @"3f", @"4f", @"5f", @"6f", @"7f", nil];
     
-    minorSharpKeySigs = [NSArray arrayWithObjects: @"A Minor", @"E Minor", @"B Minor", @"F# Minor", @"C# Minor", @"G# minor", @"D# minor", @"A# minor", nil];
-    minorSharpKeyAnswers = [NSArray arrayWithObjects: @"0", @"1#", @"2#", @"3#", @"4#", @"5#", @"6#", @"7#", nil];
+    minorSharpKeySigs = [NSArray arrayWithObjects: @"A Minor", @"E Minor", @"B Minor", @"F♯ Minor", @"C♯ Minor", @"G♯ minor", @"D♯ minor", @"A♯ minor", nil];
+    minorSharpKeyAnswers = [NSArray arrayWithObjects: @"0", @"1♯", @"2♯", @"3♯", @"4♯", @"5♯", @"6♯", @"7♯", nil];
     minorFlatKeySigs = [NSArray arrayWithObjects: @"A Minor", @"D Minor", @"G Minor", @"C Minor", @"F Minor", @"B♭ Minor", @"E♭ Minor", @"A♭ Minor", nil];
     minorFlatKeyAnswers = [NSArray arrayWithObjects: @"0", @"1f", @"2f", @"3f", @"4f", @"5f", @"6f", @"7f", nil];
     majSh = [[NSDictionary alloc] initWithObjects:majorSharpKeySigs forKeys:majorSharpKeyAnswers];
@@ -117,111 +129,141 @@
 -(IBAction)Zero:(id)sender
 {
     guess = @"0";
-    [self guessCheck];
-    keySigShower.text = [self sigChooser];
+    if([self guessCheck])
+    {
+        keySigShower.text = [self sigChooser];
+    }
 }
 
 -(IBAction)OneF:(id)sender
 {
     guess = @"1f";
-    [self guessCheck];
-    keySigShower.text = [self sigChooser];
+    if([self guessCheck])
+    {
+        keySigShower.text = [self sigChooser];
+    }
 }
 
 -(IBAction)TwoF:(id)sender
 {
     guess = @"2f";
-    [self guessCheck];
-    keySigShower.text = [self sigChooser];
+    if([self guessCheck])
+    {
+        keySigShower.text = [self sigChooser];
+    }
 }
 
 -(IBAction)ThreeF:(id)sender
 {
     guess = @"3f";
-    [self guessCheck];
-    keySigShower.text = [self sigChooser];
+    if([self guessCheck])
+    {
+        keySigShower.text = [self sigChooser];
+    }
 }
 
 -(IBAction)FourF:(id)sender
 {
     guess = @"4f";
-    [self guessCheck];
-    keySigShower.text = [self sigChooser];
+    if([self guessCheck])
+    {
+        keySigShower.text = [self sigChooser];
+    }
 }
 
 -(IBAction)FiveF:(id)sender
 {
     guess = @"5f";
-    [self guessCheck];
-    keySigShower.text = [self sigChooser];
+    if([self guessCheck])
+    {
+        keySigShower.text = [self sigChooser];
+    }
 }
 
 -(IBAction)SixF:(id)sender
 {
     guess = @"6f";
-    [self guessCheck];
-    keySigShower.text = [self sigChooser];
+    if([self guessCheck])
+    {
+        keySigShower.text = [self sigChooser];
+    }
 }
 
 -(IBAction)SevenF:(id)sender
 {
     guess = @"7f";
-    [self guessCheck];
-    keySigShower.text = [self sigChooser];
+    if([self guessCheck])
+    {
+        keySigShower.text = [self sigChooser];
+    }
 }
 -(IBAction)OneS:(id)sender
 {
-    guess = @"1#";
-    [self guessCheck];
-    keySigShower.text = [self sigChooser];
+    guess = @"1♯";
+    if([self guessCheck])
+    {
+        keySigShower.text = [self sigChooser];
+    }
 }
 
 -(IBAction)TwoS:(id)sender
 {
-    guess = @"2#";
-    [self guessCheck];
-    keySigShower.text = [self sigChooser];
+    guess = @"2♯";
+    if([self guessCheck])
+    {
+        keySigShower.text = [self sigChooser];
+    }
 }
 
 -(IBAction)ThreeS:(id)sender
 {
-    guess = @"3#";
-    [self guessCheck];
-    keySigShower.text = [self sigChooser];
+    guess = @"3♯";
+    if([self guessCheck])
+    {
+        keySigShower.text = [self sigChooser];
+    }
 }
 
 -(IBAction)FourS:(id)sender
 {
-    guess = @"4#";
-    [self guessCheck];
-    keySigShower.text = [self sigChooser];
+    guess = @"4♯";
+    if([self guessCheck])
+    {
+        keySigShower.text = [self sigChooser];
+    }
 }
 
 -(IBAction)FiveS:(id)sender
 {
-    guess = @"5#";
-    [self guessCheck];
-    keySigShower.text = [self sigChooser];
+    guess = @"5♯";
+    if([self guessCheck])
+    {
+        keySigShower.text = [self sigChooser];
+    }
 }
 
 -(IBAction)SixS:(id)sender
 {
-    guess = @"6#";
-    [self guessCheck];
-    keySigShower.text = [self sigChooser];
+    guess = @"6♯";
+    if([self guessCheck])
+    {
+        keySigShower.text = [self sigChooser];
+    }
 }
 
 -(IBAction)SevenS:(id)sender
 {
-    guess = @"7#";
-    [self guessCheck];
-    keySigShower.text = [self sigChooser];
+    guess = @"7♯";
+    if([self guessCheck])
+    {
+        keySigShower.text = [self sigChooser];
+    }
 }
 
 
 
 
--(void)guessCheck
+-(bool)guessCheck
 {
     NSArray *correctAnswerArray = [keyset allKeysForObject:keySigShower.text];
     NSLog(@"%@",correctAnswerArray);
@@ -229,41 +271,51 @@
     int scoreNum = [score.text substringFromIndex:6].intValue;
     int livesNum = [lives.text substringFromIndex:6].intValue;
     
-    if(livesNum != 0)
+    
+    if([guess isEqualToString:correctAnswer])
     {
-        if([guess isEqualToString:correctAnswer])
+        scoreNum = [score.text substringFromIndex:6].intValue;
+        livesNum = [lives.text substringFromIndex:6].intValue;
+        score.text = [NSString stringWithFormat:@"Score: %i",scoreNum+1];
+        answerLabel.text = @"Correct!";
+        return 1;
+    }
+    
+    else
+    {
+        scoreNum = [score.text substringFromIndex:6].intValue;
+        livesNum = [lives.text substringFromIndex:6].intValue;
+        lives.text = [NSString stringWithFormat:@"Lives: %i",livesNum-1];
+        correctAnswer = [correctAnswer stringByReplacingOccurrencesOfString:@"f" withString:@"♭"];
+        correctAnswer = [correctAnswer stringByReplacingOccurrencesOfString:@"0" withString:@"0♯/♭"];
+        answerLabel.text = [NSString stringWithFormat:@"Incorrect. The correct answer was %@",correctAnswer];
+        if(livesNum == 0)
         {
-            score.text = [NSString stringWithFormat:@"Score: %i",scoreNum+1];
-            answerLabel.text = @"Correct!";
+            startButton.tintColor = [UIColor blueColor];
+            UIButton *currentButton;
+            for (NSUInteger i = 0; i < guessButtons.count; i++)
+            {
+                currentButton = [guessButtons objectAtIndex:i];
+                currentButton.enabled = FALSE;
+                currentButton.alpha = 0.4;
+            }
+            
+            [startButton setTitle:@"Start" forState:UIControlStateNormal];
+            int scoreNum = [score.text substringFromIndex:6].intValue;
+            lives.text = @"Lives: 3";
+            keySigShower.text = [NSString stringWithFormat:@"Game over. You ended with a score of %i.",scoreNum];
+            score.text = @"Score: 0";
+            answerLabel.text = @"";
+            return false;
         }
         
         else
         {
-            lives.text = [NSString stringWithFormat:@"Lives: %i",livesNum-1];
-            answerLabel.text = [NSString stringWithFormat:@"Incorrect. The correct answer was %@.",[correctAnswer stringByReplacingOccurrencesOfString:@"f" withString:@"♭"]];
+            return TRUE;
         }
     }
-    
-    if(livesNum == 0)
-    {
-        startButton.tintColor = [UIColor blueColor];
-        UIButton *currentButton;
-        for (NSUInteger i = 0; i < guessButtons.count; i++)
-        {
-            currentButton = [guessButtons objectAtIndex:i];
-            currentButton.enabled = FALSE;
-            currentButton.alpha = 0.4;
-        }
-        
-        [startButton setTitle:@"Start" forState:UIControlStateNormal];
-        int scoreNum = [score.text substringFromIndex:6].intValue;
-        lives.text = @"Lives: 3";
-        keySigShower.text = [NSString stringWithFormat:@"Game over. You ended with a score of %i.",scoreNum];
-        score.text = @"Score: 0";
-        answerLabel.text = @"";
-    }
-    //TODO: Use -(NSArray *)allKeysForObject:(id)anObject on the key signature to retrieve the answer and check that against the submitted answer which is stored in the NSString guess. If they are right, add 1 to score. If they are wrong, subtract 1 from lives. Create method for lose condition which resets. Also, make an end quiz button (which takes the place of the begin quiz button) which ends that session and disables the quizbuttons and enables the start button (which re-takes the place of the end quiz button) Finally, work on timer if completed, but try to deploy some beta tests without timer function.
 }
+
 
 - (void)didReceiveMemoryWarning
 {

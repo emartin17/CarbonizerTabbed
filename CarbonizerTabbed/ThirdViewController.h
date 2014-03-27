@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ThirdViewController : UIViewController
+@interface ThirdViewController : UIViewController <UIAlertViewDelegate>
+
+
+
 {
     IBOutlet UISwitch *majorSharpsOn;
     IBOutlet UISwitch *majorFlatsOn;
@@ -17,7 +20,9 @@
     IBOutlet UISwitch *timerOn;
 }
 
--(IBAction)saveSettings:(id)sender;
+@property (strong, nonatomic) UISwitch *lastToggle;
 
+-(IBAction)saveSettings:(id)sender;
+-(BOOL)nullSetCheck;
 
 @end

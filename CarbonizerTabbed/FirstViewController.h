@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
-
+@interface FirstViewController : UIViewController <UIAlertViewDelegate, UITextFieldDelegate>
 {
     NSArray *majorSharpKeySigs;
     NSArray *majorSharpKeyAnswers;
@@ -30,7 +29,7 @@
     BOOL minorSharpsOn;
     BOOL minorFlatsOn;
     BOOL timerOn;
-    
+    UITextField *betaKey;
     
     __weak IBOutlet UIButton *startButton;
     
@@ -68,7 +67,7 @@
 -(IBAction)SixS:(id)sender;
 -(IBAction)SevenS:(id)sender;
 
--(void)guessCheck;
+-(bool)guessCheck;
 -(NSString*)sigChooser;
 
 
