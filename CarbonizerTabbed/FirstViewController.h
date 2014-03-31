@@ -69,7 +69,9 @@
 
 -(bool)guessCheck;
 -(NSString*)sigChooser;
-
+-(void)flashGreen;
+-(void)flashRed;
+-(void)revertColor;
 
 
 
