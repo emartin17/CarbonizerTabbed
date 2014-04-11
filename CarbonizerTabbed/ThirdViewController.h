@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ThirdViewController : UIViewController <UIAlertViewDelegate>
+@interface ThirdViewController : UITableViewController <UIAlertViewDelegate>
 
 
 
@@ -18,6 +18,7 @@
     IBOutlet UISwitch *minorSharpsOn;
     IBOutlet UISwitch *minorFlatsOn;
     IBOutlet UISwitch *timerOn;
+
 }
 
 @property (strong, nonatomic) UISwitch *lastToggle;

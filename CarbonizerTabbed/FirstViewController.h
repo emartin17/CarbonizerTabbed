@@ -24,11 +24,12 @@
     NSDictionary *minSh;
     NSDictionary *minFl;
     NSMutableArray *sigs;
-    BOOL majorSharpsOn;
-    BOOL majorFlatsOn;
-    BOOL minorSharpsOn;
-    BOOL minorFlatsOn;
-    BOOL timerOn;
+    bool majorSharpsOn;
+    bool majorFlatsOn;
+    bool minorSharpsOn;
+    bool minorFlatsOn;
+    bool flashingOn;
+    bool timerOn;
     UITextField *betaKey;
     
     __weak IBOutlet UIButton *startButton;

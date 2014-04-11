@@ -27,7 +27,7 @@
 
 -(BOOL)nullSetCheck
 {
-    if (majorSharpsOn.isOn || majorFlatsOn.isOn || minorSharpsOn.isOn || minorFlatsOn.isOn)
+    if (majorSharpsOn.isOn || majorFlatsOn.isOn || minorSharpsOn.isOn || minorFlatsOn.isOn || self.lastToggle == timerOn)
     {
         return TRUE;
     }

@@ -30,6 +30,8 @@
 		8884DA6C18C5889800979A92 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8884DA6A18C5889800979A92 /* InfoPlist.strings */; };
 		8884DA6E18C5889800979A92 /* CarbonizerTabbedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8884DA6D18C5889800979A92 /* CarbonizerTabbedTests.m */; };
 		8884DA7918C5970700979A92 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8884DA7818C5970700979A92 /* ThirdViewController.m */; };
+		8890F93218E9976200D3B458 /* ThirdViewControllerAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 8890F93118E9976200D3B458 /* ThirdViewControllerAppearance.m */; };
+		889F321B18E9C6DE0057FB5D /* KeysetsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 889F321A18E9C6DE0057FB5D /* KeysetsTableViewController.m */; };
 		88B94D5D18DB9BB50088ABB8 /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B94D5C18DB9BB50088ABB8 /* PageContentViewController.m */; };
 		88F7152A18C814A500656224 /* CarbonizerIconAppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 88F7152518C814A500656224 /* CarbonizerIconAppIcon.png */; };
 		88F7152B18C814A500656224 /* CarbonizerIconAppIconSettings.png in Resources */ = {isa = PBXBuildFile; fileRef = 88F7152618C814A500656224 /* CarbonizerIconAppIconSettings.png */; };
@@ -79,6 +81,10 @@
 		8884DA6D18C5889800979A92 /* CarbonizerTabbedTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarbonizerTabbedTests.m; sourceTree = "<group>"; };
 		8884DA7718C5970700979A92 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		8884DA7818C5970700979A92 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		8890F93018E9976200D3B458 /* ThirdViewControllerAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewControllerAppearance.h; sourceTree = "<group>"; };
+		8890F93118E9976200D3B458 /* ThirdViewControllerAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewControllerAppearance.m; sourceTree = "<group>"; };
+		889F321918E9C6DE0057FB5D /* KeysetsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeysetsTableViewController.h; path = ../KeysetsTableViewController.h; sourceTree = "<group>"; };
+		889F321A18E9C6DE0057FB5D /* KeysetsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KeysetsTableViewController.m; path = ../KeysetsTableViewController.m; sourceTree = "<group>"; };
 		88B94D5B18DB9BB50088ABB8 /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentViewController.h; sourceTree = "<group>"; };
 		88B94D5C18DB9BB50088ABB8 /* PageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageContentViewController.m; sourceTree = "<group>"; };
 		88F7152518C814A500656224 /* CarbonizerIconAppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CarbonizerIconAppIcon.png; sourceTree = "<group>"; };
@@ -187,8 +193,12 @@
 				8884DA5818C5889800979A92 /* SecondViewController.m */,
 				8884DA7718C5970700979A92 /* ThirdViewController.h */,
 				8884DA7818C5970700979A92 /* ThirdViewController.m */,
+				8890F93018E9976200D3B458 /* ThirdViewControllerAppearance.h */,
+				8890F93118E9976200D3B458 /* ThirdViewControllerAppearance.m */,
 				88B94D5B18DB9BB50088ABB8 /* PageContentViewController.h */,
 				88B94D5C18DB9BB50088ABB8 /* PageContentViewController.m */,
+				889F321918E9C6DE0057FB5D /* KeysetsTableViewController.h */,
+				889F321A18E9C6DE0057FB5D /* KeysetsTableViewController.m */,
 				8884DA5A18C5889800979A92 /* Images.xcassets */,
 				8884DA4618C5889800979A92 /* Supporting Files */,
 			);
@@ -344,6 +354,8 @@
 				88B94D5D18DB9BB50088ABB8 /* PageContentViewController.m in Sources */,
 				8884DA5018C5889800979A92 /* AppDelegate.m in Sources */,
 				8884DA5618C5889800979A92 /* FirstViewController.m in Sources */,
+				8890F93218E9976200D3B458 /* ThirdViewControllerAppearance.m in Sources */,
+				889F321B18E9C6DE0057FB5D /* KeysetsTableViewController.m in Sources */,
 				8884DA4C18C5889800979A92 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -474,6 +486,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CarbonizerTabbed/CarbonizerTabbed-Prefix.pch";
 				INFOPLIST_FILE = "CarbonizerTabbed/CarbonizerTabbed-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "BD88093F-C676-48E5-92E3-21465BC9A066";
 				WRAPPER_EXTENSION = app;
@@ -490,6 +503,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CarbonizerTabbed/CarbonizerTabbed-Prefix.pch";
 				INFOPLIST_FILE = "CarbonizerTabbed/CarbonizerTabbed-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "BD88093F-C676-48E5-92E3-21465BC9A066";
 				WRAPPER_EXTENSION = app;

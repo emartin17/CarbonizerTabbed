@@ -21,7 +21,7 @@
         [[NSUserDefaults standardUserDefaults]
          setBool:TRUE forKey:@"MajorSharpsOn"];
         [[NSUserDefaults standardUserDefaults]
-         setBool:TRUE forKey:@"MajorFlatsOn"];  
+         setBool:TRUE forKey:@"MajorFlatsOn"];
         [[NSUserDefaults standardUserDefaults]
          setBool:TRUE forKey:@"MinorSharpsOn"];
         [[NSUserDefaults standardUserDefaults]
@@ -31,7 +31,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     majorSharpKeySigs = [NSArray arrayWithObjects: @"C Major", @"G Major", @"D Major", @"A Major", @"E Major", @"B Major", @"F♯ Major", @"C♯ Major", nil];
-    majorSharpKeyAnswers = [NSArray arrayWithObjects: @"0", @"1♯", @"2♯", @"3♯", @"4♯", @"5♯", @"6♯", @"7♯", nil]; 
+    majorSharpKeyAnswers = [NSArray arrayWithObjects: @"0", @"1♯", @"2♯", @"3♯", @"4♯", @"5♯", @"6♯", @"7♯", nil];
     majorFlatKeySigs = [NSArray arrayWithObjects: @"C Major", @"F Major", @"B♭ Major", @"E♭ Major", @"A♭ Major", @"D♭ Major", @"G♭ Major", @"C♭ Major", nil];
     majorFlatKeyAnswers = [NSArray arrayWithObjects:  @"0", @"1f", @"2f", @"3f", @"4f", @"5f", @"6f", @"7f", nil];
     
@@ -294,6 +294,7 @@
 
 -(bool)guessCheck
 {
+    flashingOn = [[NSUserDefaults standardUserDefaults] boolForKey:@"FlashingOn"];
     NSArray *correctAnswerArray = [keyset allKeysForObject:keySigShower.text];
     NSString *correctAnswer = [correctAnswerArray objectAtIndex:0];
     int scoreNum = [score.text substringFromIndex:6].intValue;
@@ -302,7 +303,10 @@
     
     if([guess isEqualToString:correctAnswer])
     {
-        [self performSelectorInBackground:@selector(flashGreen) withObject:nil];
+        if(flashingOn)
+        {
+            [self performSelectorInBackground:@selector(flashGreen) withObject:nil];
+        }
         scoreNum = [score.text substringFromIndex:6].intValue;
         livesNum = [lives.text substringFromIndex:6].intValue;
         score.text = [NSString stringWithFormat:@"Score: %i",scoreNum+1];
@@ -311,7 +315,10 @@
     }
     else
     {
-        [self performSelectorInBackground:@selector(flashRed) withObject:nil];
+        if(flashingOn)
+        {
+            [self performSelectorInBackground:@selector(flashRed) withObject:nil];
+        }
         scoreNum = [score.text substringFromIndex:6].intValue;
         livesNum = [lives.text substringFromIndex:6].intValue;
         lives.text = [NSString stringWithFormat:@"Lives: %i",livesNum-1];
