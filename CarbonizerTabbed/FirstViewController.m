@@ -47,33 +47,13 @@
     keyset = [[NSDictionary alloc] init];
 }
 
--(void)flashGreen
-{
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:0.1];
-    [UIView setAnimationDelegate:self];
-    [UIView setAnimationDidStopSelector:@selector(revertColor)];
-    self.view.backgroundColor = [UIColor greenColor];
-    [UIView commitAnimations];
-}
-
--(void)flashRed
-{
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:0.1];
-    [UIView setAnimationDelegate:self];
-    [UIView setAnimationDidStopSelector:@selector(revertColor)];
-    self.view.backgroundColor = [UIColor redColor];
-    [UIView commitAnimations];
-}
-
 -(void)revertColor
 {
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:0.2];
-    [UIView setAnimationDelegate:self];
-    self.view.backgroundColor = [UIColor whiteColor];
-    [UIView commitAnimations];
+    [UIView animateWithDuration:0.8 delay:10.4 options:UIViewAnimationOptionTransitionNone animations:^{
+        self.view.backgroundColor = [UIColor whiteColor];
+    }completion:^(BOOL finished) {
+        NSLog(@"Reversion Complete");
+    }];
 }
 
 -(NSString*)sigChooser
@@ -121,6 +101,7 @@
 
 -(IBAction)startQuiz:(id)sender
 {
+    //self.view.backgroundColor = [UIColor brownColor];
     if([startButton.titleLabel.text isEqualToString:@"Start"])
     {
         startButton.tintColor = [UIColor redColor];
@@ -305,7 +286,15 @@
     {
         if(flashingOn)
         {
-            [self performSelectorInBackground:@selector(flashGreen) withObject:nil];
+            //((FirstView*)self.view).rightWrong=1;
+            //[self performSelectorInBackground:@selector(flashGreen) withObject:nil];
+            [UIView animateWithDuration:0.1
+                             animations:^{
+                                 self.view.backgroundColor = [UIColor greenColor];
+                             }
+                             completion:^(BOOL finished) {
+                                 [self performSelector:@selector(revertColor) withObject:nil afterDelay:0.2];
+                             }];
         }
         scoreNum = [score.text substringFromIndex:6].intValue;
         livesNum = [lives.text substringFromIndex:6].intValue;
@@ -317,7 +306,13 @@
     {
         if(flashingOn)
         {
-            [self performSelectorInBackground:@selector(flashRed) withObject:nil];
+            [UIView animateWithDuration:0.1
+                             animations:^{
+                                 self.view.backgroundColor = [UIColor redColor];
+                             }
+                             completion:^(BOOL finished) {
+                                 [self performSelector:@selector(revertColor) withObject:nil afterDelay:0.2];
+                             }];
         }
         scoreNum = [score.text substringFromIndex:6].intValue;
         livesNum = [lives.text substringFromIndex:6].intValue;
@@ -354,11 +349,24 @@
     }
 }
 
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Timer Methods
+
+-(void)updateLabel
+{
+    
+}
+
+
 @end
+
+
+
+
+
+

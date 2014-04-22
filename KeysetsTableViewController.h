@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface KeysetsTableViewController : UITableViewController
+@interface
+KeysetsTableViewController : UITableViewController
 
 @property NSString *titleText;
 

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FirstView.h"
 
 @interface FirstViewController : UIViewController <UIAlertViewDelegate, UITextFieldDelegate>
 {
@@ -46,6 +47,8 @@
     bool MFKeySet;
     bool mFKeySet;
     NSString *guess;
+    
+    
 }
 
 -(IBAction)startQuiz:(id)sender;
@@ -73,6 +76,10 @@
 -(void)flashGreen;
 -(void)flashRed;
 -(void)revertColor;
+
+-(void)updateLabel;
+-(void)timeRanOut;
+-(void)resetTimer;
 
 
 
